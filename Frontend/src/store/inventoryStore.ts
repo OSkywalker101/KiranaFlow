@@ -19,7 +19,7 @@ interface InventoryState {
     updateProduct: (id: string, updates: Partial<Product>) => Promise<void>;
 }
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+const API_URL = process.env.NEXT_PUBLIC_API_URL || '/api';
 
 export const useInventoryStore = create<InventoryState>((set) => ({
     products: [],
